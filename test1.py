@@ -23,11 +23,19 @@
 #  
 import wiringpi
 import time
+from datetime import datetime
 
 
 print (2+2)
 print ("Hello World")
 
+print (dir(time))
+print ("Sleep")
+print (dir(time.sleep))
+print (time.gmtime())
+
+print (datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+print (datetime.now().strftime('%S'))
 
 print (wiringpi.piBoardRev())
 
@@ -35,7 +43,7 @@ print (wiringpi.piBoardRev())
 wiringpi.wiringPiSetup()
 
 #pinMode pin, in/out (0=in 1=out)
-wiringpi.pinMode(0, 1)
+wiringpi.pinMode(0, 0)
 
 loop = 0
 while (loop < 20):
