@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+#  test1.py
+#  
+#  Copyright 2017  <pi@raspberrypi>
+#  
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
+#  
+#  
+import wiringpi
+import time
+
+
+print (2+2)
+print ("Hello World")
+
+
+print (wiringpi.piBoardRev())
+
+
+wiringpi.wiringPiSetup()
+
+#pinMode pin, in/out (0=in 1=out)
+wiringpi.pinMode(0, 1)
+
+loop = 0
+while (loop < 20):
+    wiringpi.digitalWrite(0, 0)
+    time.sleep(2)
+    wiringpi.digitalWrite(0, 1)
+    time.sleep(2)
+    loop = loop + 1
+    print (loop)
+    
+
+
+
