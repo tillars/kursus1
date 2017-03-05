@@ -129,7 +129,7 @@ potentiometer_adc = 0;
 # call this procedure, if control-c is pressed.
 #signal.signal(signal.SIGINT, ctrlCHandler)
 
-# program_exit is called, when sys.exit is executed.
+# program_exit is called, when sys.exit is executed. 
 #atexit.register(program_exit)
 
 print " "
