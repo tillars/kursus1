@@ -98,12 +98,9 @@ GPIO.setup(SPIMOSI, GPIO.OUT)
 GPIO.setup(SPIMISO, GPIO.IN )
 GPIO.setup(SPICLK,  GPIO.OUT)
 GPIO.setup(SPICS,   GPIO.OUT)
-
-# 10k trim pot connected to adc #0
 adc_channel0 = 0;
 pos = 0
 temp_avg = []
-
 
 while True:
 	trim_pot = readadc(adc_channel0, SPICLK, SPIMOSI, SPIMISO, SPICS)
@@ -116,10 +113,8 @@ while True:
 	pos += 1
 	if pos == 30:		
 		pos = 0	
-		#print (round(sum(temp_avg)/len(temp_avg),1))
 		del temp_avg
 		temp_avg = []
-	#print ("\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r"),
 	time.sleep(0.1)
 
 if CONTROL_C: sys.exit(0)
