@@ -28,6 +28,26 @@ import time
 from datetime import datetime
 
 
+print ('*************')
+a = 10
+
+print (a)
+print (id(a))
+
+b = a
+
+print (b)
+print (id(b))
+
+b = 11
+a = 11
+
+print (a)
+print (id(a))
+print (b)
+print (id(b))
+print ('*************')
+
 print (2+2)
 print ("Hello World")
 
