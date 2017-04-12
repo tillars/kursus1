@@ -49,7 +49,7 @@ file_text = """<!DOCTYPE html>
             <h1>Temperatur: </h1>
         </font>
         <font color="#color#">  
-            <p>Temp = #temp# °C</p>
+            <p>Temp = #temp# &#x2103;</p>
         </font>
     </body>
 </html>"""

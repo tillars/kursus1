@@ -21,6 +21,8 @@
 #  MA 02110-1301, USA.
 #  
 #  
+#
+#HUSK VIRKER KUN MED python2.7!!!!!!!!!
 import wiringpi
 import time
 from datetime import datetime
@@ -43,7 +45,7 @@ print (wiringpi.piBoardRev())
 wiringpi.wiringPiSetup()
 
 #pinMode pin, in/out (0=in 1=out)
-wiringpi.pinMode(0, 0)
+wiringpi.pinMode(0, 1)
 
 loop = 0
 while (loop < 20):
