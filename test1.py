@@ -75,7 +75,5 @@ while (loop < 20):
     time.sleep(2)
     loop = loop + 1
     print (loop)
-    
-
 
 
