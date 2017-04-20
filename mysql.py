@@ -23,11 +23,17 @@
 #  
 import pymysql
 
-cnx = pymysql.connect(user='root', password='', host='127.0.0.1', database='for_testing', autocommit=True)            
+cnx = pymysql.connect(user='root', password='root', host='127.0.0.1', database='for_testing', autocommit=True)            
 cur = cnx.cursor()
-cur.execute('INSERT INTO test (name) values ("Tom")')
+#cur.execute('INSERT INTO test (name) values ("Tom")')
 cur.execute("SELECT * from test")
-print(cur.description) 	
+
+print(type(cur.description)) 	
+print(len(cur.description))
+print(cur.description[0])
+print(dir(cur))
+
+
 
 for row in cur:
 	print(row)
