@@ -55,7 +55,6 @@ def readadc(adcnum, clockpin, mosipin, misopin, cspin):
 
 	adcout = 0
 	# read in one empty bit, one null bit and 12 ADC bits
-	# pro desetibitovy prevodnik tu bylo puvodne cislo 12
 	for i in range(13):
 		GPIO.output(clockpin, True )
 		GPIO.output(clockpin, False)
