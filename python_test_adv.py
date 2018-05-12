@@ -58,8 +58,8 @@ for vogn_obj in a:
 
 print ("#Opretter v=vogn - functors")
 v = vogn(1, 2)
-v("Fra main")
-print(v("Fra main"))
+v("Fra main A")
+print(v("Fra main B"))
 
 
 print ("#Modtager 2 forskellige funktioner")
